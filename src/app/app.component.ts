@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'myapp2';
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.router.events.subscribe((e) => {
+      console.log(e);
+    });
+  }
 
   goToRoute(route: string = '/fourth'): void {
     this.router.navigateByUrl(route).then(() => {
