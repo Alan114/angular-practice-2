@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,13 +18,8 @@ export class AppComponent {
   testProp = new FormControl('');
 
   profileForm = new FormGroup({
-    firstName: new FormControl(''),
+    firstName: new FormControl('', Validators.minLength(2)),
     lastName: new FormControl(''),
-  });
-
-  profileTwo = this.fb.group({
-    firstName: [''],
-    lastName: [''],
   });
 
   constructor(private router: Router, private fb: FormBuilder) {
