@@ -10,6 +10,10 @@ const routes: Routes = [
   { path: 'second', component: SecondComponent },
   { path: 'third', component: ThirdComponent },
   { path: 'fourth', component: FourthComponent },
+  {
+    path: '**',
+    component: FirstComponent,
+  },
 ];
 
 @NgModule({
