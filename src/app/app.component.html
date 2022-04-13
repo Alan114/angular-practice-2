@@ -14,6 +14,8 @@
 </div>
 
 <input type="text" [formControl]="testProp" name="testProp" />
+<hr />
+<button (click)="modifyFormControl()">Modify form control</button>
 {{ testProp.value }}
 
 <router-outlet></router-outlet>

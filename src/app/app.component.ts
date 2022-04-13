@@ -21,4 +21,8 @@ export class AppComponent {
       console.log(this.router.url);
     });
   }
+
+  modifyFormControl(): void {
+    this.testProp.setValue('');
+  }
 }
