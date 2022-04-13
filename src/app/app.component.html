@@ -18,4 +18,12 @@
 <button (click)="modifyFormControl()">Modify form control</button>
 {{ testProp.value }}
 
+<form [formGroup]="profileForm">
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName" />
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName" />
+</form>
+
 <router-outlet></router-outlet>

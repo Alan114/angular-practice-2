@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,8 +9,20 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'myapp2';
+
   testProp = new FormControl('');
-  constructor(private router: Router) {
+
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
+
+  profileTwo = this.fb.group({
+    firstName: [''],
+    lastName: [''],
+  });
+
+  constructor(private router: Router, private fb: FormBuilder) {
     this.router.events.subscribe((e) => {
       console.log(e);
     });
