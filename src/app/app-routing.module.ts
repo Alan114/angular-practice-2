@@ -11,6 +11,11 @@ const routes: Routes = [
   { path: 'third', component: ThirdComponent },
   { path: 'fourth', component: FourthComponent },
   {
+    path: '',
+    redirectTo: '/first',
+    pathMatch: 'full',
+  },
+  {
     path: '**',
     component: FirstComponent,
   },

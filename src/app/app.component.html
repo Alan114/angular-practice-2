@@ -1,12 +1,17 @@
 <h1>{{ "Routing in Angular" | uppercase }}</h1>
 
-<a routerLink="/first">Go to first</a>
-<hr />
-<a routerLink="/second">Go to second</a>
-<hr />
-<a routerLink="/third">Go to third</a>
-<hr />
-<a routerLink="/fourth">Go to fourth</a>
+<div>
+  <a routerLink="/first">Go to first</a>
+  <hr />
+  <a routerLink="/second">Go to second</a>
+  <hr />
+  <a routerLink="/third">Go to third</a>
+  <hr />
+  <a routerLink="/fourth">Go to fourth</a>
+  <hr />
+</div>
+
+<button (click)="goToRoute()">Go to fourth</button>
 
 <div class="split left">
   <div class="centered">
