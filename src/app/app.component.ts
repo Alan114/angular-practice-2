@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'myapp2';
+  testProp = new FormControl('');
   constructor(private router: Router) {
     this.router.events.subscribe((e) => {
       console.log(e);
