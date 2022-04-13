@@ -11,6 +11,8 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   goToRoute(route: string = '/fourth'): void {
-    this.router.navigateByUrl(route);
+    this.router.navigateByUrl(route).then(() => {
+      console.log(this.router.url);
+    });
   }
 }
